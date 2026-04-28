@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=1280">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contador Regresivo</title>
   <style>
     * {
@@ -12,20 +12,20 @@
     }
 
     html, body {
-      min-height: 100dvh;
-      width: 100%;
-      font-family: Arial, sans-serif;
-      background-color: #ff6200;
-      background-image: url('imagen_fondo.png');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-attachment: fixed; 
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
+    min-height: 100dvh;
+    width: 100%;
+    font-family: Arial, sans-serif;
+
+    background: 
+      url('image.png') center / contain no-repeat,
+      linear-gradient(135deg, #1a1a1a, #3d0000);
+
+    background-attachment: fixed; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
 
     .contador-container {
       background: linear-gradient(135deg, #1a1a1a, #3d0000);
@@ -37,7 +37,11 @@
       min-width: 100px;
       position: relative;
       z-index: 1;
-      margin-top: 500px;
+      margin-top: 150px;
+    }
+
+    .contador-container {
+      transform: scale(0.5);
     }
 
     .titulo {
